@@ -1,13 +1,26 @@
 # Capistrano Wordpress boilerplate
-This is a tutorial project using Capistrano and WordPress.
-
-For setting up a brand new project, clone this project on your local machine with `git clone https://github.com/andreasonny83/Wordpress-Capistrano-Boilerplate.git`
-
-Because Capistrano clones a Git repository inside your hosting server, you will need to create a create a brand new Git repository inside the cloned folder. You can do that removing the `.git ` folder and start a new rep with `git init`
+This is a tutorial project using WordPress as a submodule and Capistrano for deploying.
 
 ## Why Capistrano
 
 Capistrano allows you to write your own deployment scripts. That means you can write scripts that deploy mysql databases, take backups, and most importantly, dynamically create environment specific WordPress configuration files.
+
+## Installation
+
+For setting up a brand new project, clone this project on your local machine with
+
+    `git clone https://github.com/andreasonny83/Wordpress-Capistrano-Boilerplate.git`
+
+And remove this origin repository from your working copy:
+
+    cd Wordpress-Capistrano-Boilerplate
+    git remote rm origin
+
+This is because Capistrano clones a Git repository inside your hosting server meaning that you will need to create a brand new Git repository inside the cloned folder. You can also do that removing the `.git ` folder instead of `git remote rm origin`
+
+Then, you need to add your new origin repository to your working copy with `git remote add origin <url_here>` or start a new Git repo with `git init`
+
+### Install the Ruby dependencies
 
 We are going to use [Bundler](http://bundler.io/). Bundler provides a consistent environment for Ruby projects by tracking and installing the exact gems and versions that are needed.
 If you don't have Bundler already installed in your machine, open a terminal window and run this command:
