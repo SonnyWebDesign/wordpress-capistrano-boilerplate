@@ -1,0 +1,15 @@
+# Folders
+/config export-ignore
+/lib export-ignore
+
+# Files
+Capfile export-ignore
+README.md export-ignore
+dev-config.php export-ignore
+
+# Git files
+.gitattributes export-ignore
+.gitignore export-ignore
+
+# Bundler
+.bundle export-ignore
