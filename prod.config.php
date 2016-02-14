@@ -22,7 +22,8 @@ define('DB_HOST', 'localhost');
  define('LOGGED_IN_SALT',   'put your unique phrase here');
  define('NONCE_SALT',       'put your unique phrase here');
 
-define( 'WP_DEBUG_DISPLAY', true );
-define( 'WP_DEBUG', true );
-define('WP_DEBUG_LOG', false);
-@ini_set( 'display_errors', E_ALL );
+define('WP_DEBUG', false);
+define('WP_DEBUG_DISPLAY', false);
+define('WP_DEBUG_LOG', true);
+@ini_set( 'log_errors', true );
+@ini_set('display_errors', false);

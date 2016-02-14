@@ -118,7 +118,7 @@ Feel free to create as many `.rb` files as you want inside this folder. You can 
 ## Server side
 
 Because the `linked_files` array is pointing to `config.php` and `.htaccess`, you will need to upload these 2 files inside your shared folder on your server before deploying your project, otherwise an error will be triggered and the deploy will be cancelled.
-You can copy the .htaccess from this project inside your `shared` folder and also create a copy of dev.config.php to use as your deployment config.php.
+You can copy the .htaccess from this project inside your `shared` folder and also create a copy of `prod.config.php` to use as your deployment config.php.
 The shared folder will be created inside your `deploy_to` path followed by `shared` (eg. home/my_user/capistrano/Wordpress-Capistrano-Boilerplate/stage/shared)
 
 ## Contributing
