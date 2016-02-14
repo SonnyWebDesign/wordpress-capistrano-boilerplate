@@ -64,7 +64,6 @@ Core files, plugins, and all. The best (and cleanest) way to do this is to sit y
     /lib/capistrano/tasks/clean_folder.rake
     /lib/capistrano/tasks/create_symlink.rake
     /lib/capistrano/tasks/file_permissions.rake
-    .gitattributes
     .gitignore
     Capfile
     dev.config.php
