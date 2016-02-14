@@ -15,6 +15,3 @@ node_modules
 # Gems
 *.gem
 .bundle
-
-# Submodules
-.gitmodules

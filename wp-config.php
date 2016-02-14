@@ -2,11 +2,13 @@
 // ===================================================
 // Load database info and local development parameters
 // ===================================================
-if ( file_exists( dirname( __FILE__ ) . '/../../production-config.php' ) ) {
-	include( dirname( __FILE__ ) . '/../../production-config.php' );
+if ( file_exists( dirname( __FILE__ ) . '/config.php' ) ) {
+	// if we are on a live environment, use config.php
+	include( dirname( __FILE__ ) . '/config.php' );
 }
 else {
-	include( dirname( __FILE__ ) . '/dev-config.php' );
+	// otherwise, on a development environment, use the dev.config.php
+	include( dirname( __FILE__ ) . '/dev.config.php' );
 }
 
 define( 'DB_CHARSET', 'utf8' );

@@ -1,10 +1,15 @@
 # the server folder where we want to deploy the project
-set :deploy_to, "/home/SSH_USER_NAME/capistrano/stage/#{fetch(:application)}"
+set :deploy_to, "/home/#{fetch(:user)}/capistrano/#{fetch(:application)}/stage"
+# deploy the stage environment to stage.application_name so the live url will be something like www.YOUR_DOMAIN.com/stage.application
+set :application_name, "stage.#{fetch(:application)}"
 
-role :web, %w{YOUR_DOMAIN.com}
+# link the config.php and .htaccess using the one stored in the shared folder
+set :linked_files, fetch(:linked_files, []).push('config.php', '.htaccess')
 
-server 'YOUR_DOMAIN.com',
-  user: 'SSH_USER_NAME',
+role :web, "#{fetch(:server_name)}"
+
+server "#{fetch(:server_name)}",
+user: "#{fetch(:user)}",
   roles: %w{web}
 
-set :branch, 'master'
+set :branch, 'develop'
