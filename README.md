@@ -25,6 +25,10 @@ If you don't have Bundler already installed in your machine, open a terminal win
 
     gem install bundler
 
+or, if are on El Capitan:
+
+    gem install bundler -n /usr/local/bin
+
 Then, from inside your project folder, run:
 
     bundle install && bundle update
