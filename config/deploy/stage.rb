@@ -1,5 +1,7 @@
 # the server folder where we want to deploy the project
-set :deploy_to, "/home/#{fetch(:user)}/capistrano/#{fetch(:application)}/stage"
+set :deploy_dir, "/home/#{fetch(:user)}/capistrano/#{fetch(:application)}"
+set :deploy_to, "#{fetch(:deploy_dir)}/stage"
+
 # deploy the stage environment to stage.application_name so the live url will be something like www.YOUR_DOMAIN.com/stage.application
 set :application_name, "stage.#{fetch(:application)}"
 

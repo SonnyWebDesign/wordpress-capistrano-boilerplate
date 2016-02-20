@@ -13,5 +13,7 @@ task :clean_folder do
                                                   " -o -type d -name 'lib'"\
                                                   " -o -type d -name 'config'"\
                                                   " | xargs -I {} rm -rf '{}';"
+    # Remove the development theme folder
+    # execute "rm -Rf #{fetch(:release_path)}/content/themes/Capistrano_theme_dev/";
   end
 end
