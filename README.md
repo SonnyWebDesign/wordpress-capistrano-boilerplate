@@ -128,7 +128,8 @@ This is the core of Capistrano. In here you can set up all the variables Capistr
 This is relative to the environment you want to deploy.
 Feel free to create as many `.rb` files as you want inside this folder. You can then simply deploy one of them calling `bundle exec cap {filename} deploy` (eg. `bundle exec cap stage deploy`).
 
-* **deploy_to** : the folder in where you want to deploy your project.
+* **deploy_dir** : the folder in where you want to deploy your project.
+* **deploy_to** : This is more specific to the current environment. Usually this is a subfolder of deploy_dir.
 * **application_name** : this will be used for creating the symbolic link in your public folder
 * **linked_files** : these files will be symlinked from your shared folder inside your project folder
 * **branch** : the git branch you want to deploy
