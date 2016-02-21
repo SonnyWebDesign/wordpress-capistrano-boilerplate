@@ -1,4 +1,4 @@
-# Capistrano Wordpress boilerplate
+# Wordpress Capistrano Boilerplate
 This is a tutorial project using WordPress as a submodule and Capistrano for deploying.
 
 ## Why Capistrano
