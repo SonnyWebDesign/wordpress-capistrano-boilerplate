@@ -9,7 +9,7 @@ Capistrano allows you to write your own deployment scripts. That means you can w
 
 For setting up a brand new project, clone this project on your local machine with
 
-    git clone --recursive https://github.com/andreasonny83/Wordpress-Capistrano-Boilerplate.git
+    git clone --recursive https://github.com/SonnyWebDesign/Wordpress-Capistrano-Boilerplate.git
 
 And remove the origin repository from your working copy:
 
@@ -148,7 +148,15 @@ The shared folder will be created inside your `deploy_to` path followed by `shar
 4. Push to the branch: `git push origin my-new-feature`
 5. Submit a pull request
 
+## License
+
+The code and the documentation are released under the [MIT License](http://sonnywebdesign.mit-license.org).
+
 ## Changelog
+
+### 0.1.1
+* License and repository URL updated<br>
+2016.02.21
 
 ### 0.1.0
 * Some bug fixed from the previous commit
