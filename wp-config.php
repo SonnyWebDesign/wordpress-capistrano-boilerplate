@@ -2,14 +2,7 @@
 // ===================================================
 // Load database info and local development parameters
 // ===================================================
-if ( file_exists( dirname( __FILE__ ) . '/config.php' ) ) {
-	// if we are on a live environment, use config.php
-	include( dirname( __FILE__ ) . '/config.php' );
-}
-else {
-	// otherwise, on a development environment, use the dev.config.php
-	include( dirname( __FILE__ ) . '/dev.config.php' );
-}
+require( dirname( __FILE__ ) . '/config.php' );
 
 define( 'DB_CHARSET', 'utf8' );
 define( 'DB_COLLATE', '' );

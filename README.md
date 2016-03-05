@@ -80,6 +80,7 @@ Core files, plugins, and all. The best (and cleanest) way to do this is to sit y
     .gitignore
     Capfile
     dev.config.php
+    prod.config.php
     Gemfile
     Gemfile.lock
     index.php
@@ -91,15 +92,17 @@ Your uploads directory should be git ignored as you don't want to version contro
 
 Great, now you're almost ready for rendering your WordPress website.
 
-First we need a database. Create or clone your local database and configure your `dev.config.php` with your settings.
+First we need a database. Create or clone your local database, then copy `dev.config.php` to `config.php` and edit with your settings.
 
-`dev.config.php` will be only used on your local environment and won't we deploy to your server folder. We already mentioned that inside the `.gitignore` file for you :sunglasses:
+`dev.config.php` and `prod.config.php` are only guidelines for you to create your `config.php` files on all your environment. Make sure to remove these 2 files before committing to your Git repository.
+
+`config.php` should only be used on your local environment and you should have another `config.php` with your server configuration inside your `linked_files` folder, but that is better explained in the `Server side` section of this file. For now just make sure not to deploy your `config.php` file. We already mentioned that inside the `.gitignore` file for you :sunglasses:
 
 Inside `wp-config.php` we already set some constants to a default value like `DB_CHARSET`, `DB_COLLATE` and `WPLANG`. Feel free to edit this file with your custom settings.
 In the same file, there is a section called `Custom Directory`, here we tell WordPress our new file structure.
-We also try to include a `config.php`. This will contain your server database configuration and will be stored inside your server `shared` folder from where Capistrano will create a symlink inside your project folder so you don't need to do it manually.
+We also need to require the `config.php`. This will contain your environment database configuration. On your server side, this will be stored inside your server `shared` folder from where Capistrano will be able to create a symbolic link inside your project folder so you don't need to do it manually.
 
-Now, if you have correctly configured your database and your `dev.config.php` you should be able to run your local environment using some PHP and MySQL tool like MAMP.
+Now, if you have correctly configured your database and your `config.php` you should be able to run your local environment using some PHP and MySQL tool like MAMP.
 
 #### Be careful
 
@@ -153,6 +156,11 @@ The shared folder will be created inside your `deploy_to` path followed by `shar
 The code and the documentation are released under the [MIT License](http://sonnywebdesign.mit-license.org).
 
 ## Changelog
+
+### 0.1.2
+* config.php strategy changed to only use a config.php on all the environment instead of dev and prod.config.php
+* Documentation updated<br>
+2016.03.05
 
 ### 0.1.1
 * License and repository URL updated<br>
