@@ -27,7 +27,7 @@ node_modules
 # config/uploads
 
 # prod files
-prod.*
+# prod.*
 
 # cache
 # content/cache
