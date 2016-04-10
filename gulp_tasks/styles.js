@@ -39,6 +39,7 @@ function stylesDev() {
       outputStyle: 'expanded',
       sourceComments: true
     }).on('error', sass.logError))
-    .pipe(gulp.dest(conf.path.tmpDir('/sass')))
+    .pipe(gulp.dest(conf.path.distDir('/sass')))
+    // .pipe(gulp.dest(conf.path.tmpDir('/sass')))
     .pipe(livereload());
 }

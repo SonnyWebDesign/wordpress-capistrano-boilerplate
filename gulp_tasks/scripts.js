@@ -23,5 +23,6 @@ function scriptsDev() {
     // .pipe(eslint())
     // .pipe(eslint.format())
     // .pipe(babel())
-    .pipe(gulp.dest(conf.path.tmpDir('/scripts')));
+    .pipe(gulp.dest(conf.path.distDir('/scripts')));
+    // .pipe(gulp.dest(conf.path.tmpDir('/scripts')));
 }
