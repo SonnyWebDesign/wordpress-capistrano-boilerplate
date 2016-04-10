@@ -19,7 +19,13 @@ $table_prefix  = 'wp_';
 // ========================
 //    Custom Directory
 // ========================
-define( 'WP_HOME',    'http://'.$_SERVER['SERVER_NAME'] );
+if ( isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' ) {
+	define( 'WP_HOME',    'https://'.$_SERVER['SERVER_NAME'] );
+}
+else {
+	define( 'WP_HOME',    'http://'.$_SERVER['SERVER_NAME'] );
+}
+
 define( 'WP_SITEURL', WP_HOME . '/wordpress' );
 
 define( 'WP_CONTENT_DIR', $_SERVER['DOCUMENT_ROOT'].'/content' );

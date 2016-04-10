@@ -1,5 +1,5 @@
 # Wordpress Capistrano Boilerplate
-This is a tutorial project using WordPress as a submodule and Capistrano for deploying.
+This is a boilerplate project using WordPress as a submodule and Capistrano for deploying.
 
 ## Why Capistrano
 
@@ -70,7 +70,7 @@ Core files, plugins, and all. The best (and cleanest) way to do this is to sit y
     /config/deploy/stage.rb
     /content/plugins/
     /content/themes/
-    /content/uploads/ <-- or blogss.dir
+    /content/uploads/ <-- or blogs.dir
     /wordpress/
     /lib/
     /lib/capistrano/tasks/check_write_permissions.rake
@@ -143,6 +143,21 @@ Because the `linked_files` array is pointing to `config.php` and `.htaccess`, yo
 You can copy the .htaccess from this project inside your `shared` folder and also create a copy of `prod.config.php` to use as your deployment config.php.
 The shared folder will be created inside your `deploy_to` path followed by `shared` (eg. home/my_user/capistrano/Wordpress-Capistrano-Boilerplate/stage/shared)
 
+## Development with Gulp
+
+We've already provided to place a `theme-dev` folder in your project's root directory.
+
+The generated distribution folder will be place under `content/themes/{theme name}` where `{theme name}` is the name defined in your `package.json` file under `themeName` (by default this is set to myTheme).
+
+Place your development theme files inside the `theme-dev` folder and, once you're happy with that, run the following Gulp tasks to compile your project:
+
+ - gulp : this will create a development theme under your `content/themes` directory
+
+ - gulp watch : start developing and the file changes you made inside your `theme-dev` folder will be automatically detected by Gulp and a compiled in your theme folder
+
+ - gulp build : create a distribution version under your `content/theme` directory.
+
+
 ## Contributing
 
 1. Fork it!
@@ -157,16 +172,4 @@ The code and the documentation are released under the [MIT License](http://sonny
 
 ## Changelog
 
-### 0.1.2
-* config.php strategy changed to only use a config.php on all the environment instead of dev and prod.config.php
-* Documentation updated<br>
-2016.03.05
-
-### 0.1.1
-* License and repository URL updated<br>
-2016.02.21
-
-### 0.1.0
-* Some bug fixed from the previous commit
-* Ready for the first release<br>
-2016.02.20
+Changelog available [here](https://github.com/SonnyWebDesign/Wordpress-Capistrano-Boilerplate/blob/master/CHANGELOG.md)
