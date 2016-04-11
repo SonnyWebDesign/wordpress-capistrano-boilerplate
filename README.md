@@ -9,11 +9,11 @@ Capistrano allows you to write your own deployment scripts. That means you can w
 
 For setting up a brand new project, clone this project on your local machine with
 
-    git clone --recursive https://github.com/SonnyWebDesign/Wordpress-Capistrano-Boilerplate.git
+    git clone --recursive https://github.com/SonnyWebDesign/wordpress-capistrano-boilerplate.git
 
 And remove the origin repository from your working copy:
 
-    cd Wordpress-Capistrano-Boilerplate
+    cd wordpress-capistrano-boilerplate
     git remote rm origin
 
 Then create a new Git repository and add the new origin to your working copy with
@@ -141,7 +141,7 @@ Feel free to create as many `.rb` files as you want inside this folder. You can 
 
 Because the `linked_files` array is pointing to `config.php` and `.htaccess`, you will need to upload these 2 files inside your shared folder on your server before deploying your project, otherwise an error will be triggered and the deploy will be cancelled.
 You can copy the .htaccess from this project inside your `shared` folder and also create a copy of `prod.config.php` to use as your deployment config.php.
-The shared folder will be created inside your `deploy_to` path followed by `shared` (eg. home/my_user/capistrano/Wordpress-Capistrano-Boilerplate/stage/shared)
+The shared folder will be created inside your `deploy_to` path followed by `shared` (eg. home/my_user/capistrano/wordpress-capistrano-boilerplate/stage/shared)
 
 ## Development with Gulp
 
@@ -172,4 +172,4 @@ The code and the documentation are released under the [MIT License](http://sonny
 
 ## Changelog
 
-Changelog available [here](https://github.com/SonnyWebDesign/Wordpress-Capistrano-Boilerplate/blob/master/CHANGELOG.md)
+Changelog available [here](https://github.com/SonnyWebDesign/wordpress-capistrano-boilerplate/blob/master/CHANGELOG.md)
