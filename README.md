@@ -18,7 +18,7 @@ And remove the origin repository from your working copy:
 
 Then create a new Git repository and add the new origin to your working copy with
 
-    `git remote add origin <url_here>`
+    git remote add origin <url_here>
 
 or start a new Git repo with `git init`
 
@@ -144,6 +144,10 @@ You can copy the .htaccess from this project inside your `shared` folder and als
 The shared folder will be created inside your `deploy_to` path followed by `shared` (eg. home/my_user/capistrano/wordpress-capistrano-boilerplate/stage/shared)
 
 ## Development with Gulp
+
+First of all, install all the Node dependencies with:
+
+    npm install
 
 We've already provided to place a `theme-dev` folder in your project's root directory.
 
