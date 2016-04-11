@@ -18,7 +18,7 @@ And remove the origin repository from your working copy:
 
 Then create a new Git repository and add the new origin to your working copy with
 
-    `git remote add origin <url_here>`
+    git remote add origin <url_here>
 
 or start a new Git repo with `git init`
 
