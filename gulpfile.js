@@ -44,10 +44,16 @@ function clean() {
   ]);
 }
 
+function copy() {
+  return gulp.src(conf.path.themeDir('/*.*'))
+    .pipe(gulp.dest(conf.path.distDir()));
+}
+
 function watch(done) {
   livereload.listen();
 
   gulp.watch(conf.path.themeDir('/sass/**/*.scss'), ['styles:dev']);
   gulp.watch(conf.path.themeDir('/scripts/**.js'), ['scripts:dev']);
   gulp.watch(conf.path.themeDir('/images/*.{png,jpg,gif}'), ['images']);
+  gulp.watch(conf.path.themeDir('/*.*'), ['copy']);
 }

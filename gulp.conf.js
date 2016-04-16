@@ -23,7 +23,6 @@ for (let pathName in exports.paths) {
     const pathValue = exports.paths[pathName];
     const funcArgs = Array.prototype.slice.call(arguments);
     const joinArgs = [pathValue].concat(funcArgs);
-    console.log(path.join.apply(this, joinArgs));
 
     return path.join.apply(this, joinArgs);
   }
